@@ -22,7 +22,7 @@ class Particle(Sprite):
         # Give it a random direction and speed
         self.v_x = random.uniform(-3, 3)
         self.v_y = random.uniform(-3, 3)
-        self.lifetime = 20  # How many frames it lasts
+        self.lifetime = 20 
 
     def update(self):
         """Move the particle and fade it out."""
@@ -30,6 +30,6 @@ class Particle(Sprite):
         self.rect.y += self.v_y
         self.lifetime -= 1
         
-        # Delete the particle when it 'dies'
+        
         if self.lifetime <= 0:
             self.kill()
